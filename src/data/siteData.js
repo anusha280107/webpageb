@@ -139,7 +139,7 @@ export const timeline = {
       
       
       title: 'First picture together',
-      photo: '/public/photos/unnamed.jpg',
+      photo: '/photos/unnamed.jpg',
       
       message: 'Our first picture together, the beginning of a thousand beautiful memories. ❤️',
     },
@@ -148,7 +148,7 @@ export const timeline = {
       
       
       title: 'College bus selfie',
-      photo: '/public/photos/clg bus.jpg',
+      photo: '/photos/clg bus.jpg',
       
       message: 'Our cute little college bus selfie, sitting opposite each other but always close at heart. 🚌💕',
     },
@@ -156,7 +156,7 @@ export const timeline = {
       id: 't3',
       
       title: 'First hand-holding in traditonal attire',
-      photo: '/public/photos/traditonal.jpg',
+      photo: '/photos/traditonal.jpg',
       
       message: 'Our first hand-in-hand moment in traditional attire, looking like a perfect pair. 🫶',
     },
@@ -164,7 +164,7 @@ export const timeline = {
       id: 't4',
     
       title: 'Professional attire picture',
-      photo: '/public/photos/proffesional.jpg',
+      photo: '/photos/proffesional.jpg',
       
       message: 'Our picture together in professional attire, looking perfectly made for each other. ✨',
     },
@@ -172,7 +172,7 @@ export const timeline = {
       id: 't5',
       
       title: 'First outing and first hug',
-      photo: '/public/photos/hug.jpg',
+      photo: '/photos/hug.jpg',
       
       message: "Our first outing, our first hug, and a memory I'll hold close to my heart forever. 🫂",
     },
@@ -180,7 +180,7 @@ export const timeline = {
       id: 't6',
      
       title: 'Our eyes picture',
-      photo: '/public/photos/eye.jpg',
+      photo: '/photos/eye.jpg',
       
       message: 'Our eyes tell a love story that words could never express. 👀❤️',
     },
@@ -188,7 +188,7 @@ export const timeline = {
       id: 't7',
       
       title: 'childhood picture',
-      photo: '/public/photos/kutti.jpg',
+      photo: '/photos/kutti.jpg',
       
       message: 'My favourite little boy, who will always have the biggest place in my heart. 🥹💗',
     },
@@ -210,21 +210,21 @@ export const gallery = {
   favourite: {
     id: 'fav',
     badge: 'My Favourite Memory',
-    src: '/public/photos/hold hand.jpg',
+    src: '/photos/hold hand.jpg',
     
     teaser: 'you are always my favourite 🥹💕',
     
   },
 
   items: [
-    { id: 'g1', src: '/public/photos/hold hand.jpg', shape: 'portrait', tilt: -2, caption: 'A little moment, but a memory I want to hold forever. ❤️', message: "I don't know where life will take us, but I hope your hand stays in mine through every step of it. 🥹❤️" },
-    { id: 'g2', src: '/public/photos/bike and you.jpg', shape: 'square', tilt: 2, caption: 'Your two favourite things in one picture! 🏍️❤️', message: 'I know how much you love your bike, but I hope you know that I want to be your favourite person to ride through every road and every adventure with. ❤️' },
-    { id: 'g3', src: '/public/photos/hand heart.jpg', shape: 'landscape', tilt: -1, caption: 'A little heart, made with a lot of love. ❤️', message: 'Two palms, two little hearts, but just one love. No matter where life takes us, a piece of my heart will always belong to you. 🥹💕' },
-    { id: 'g4', src: '/public/photos/together biside.jpg', shape: 'tall', tilt: 2, caption: 'My favourite place is right beside you. ❤️', message: "I don't need anything special when I'm with you. Just sitting beside you, holding your arm and enjoying those little moments is enough to make me happy. 🥹💕" },
-    { id: 'g5', src: '/public/photos/bike ride.jpg', shape: 'square', tilt: -2, caption: 'Our first ride, the beginning of many beautiful memories! 🏍️❤️', message: 'I still remember our very first bike ride together. That little selfie became one of my favourite memories. I wish we could go on a thousand more rides, making memories together. 🥹💕' },
-    { id: 'g6', src: '/public/photos/fav pic.jpg', shape: 'portrait', tilt: 1, caption: 'My favourite picture of my favourite person. ❤️', message: "I don't know what makes this picture so special, but I could look at it a hundred times and still smile. Maybe it's because the person in it means the world to me. 🥹❤️" },
-    { id: 'g7', src: '/public/photos/bus travel.jpg', shape: 'landscape', tilt: -2, caption: 'Our first night bus ride together! 🌙❤️', message: 'That night journey with you will always be a special memory for me. The little kisses, warm hugs, sweet moments and having you beside me made that ride even more beautiful. I still remember how special it felt to be close to you throughout the journey. I wish we could have many more night journeys filled with kisses, hugs and endless love,🥹😘🫂💕' },
-    { id: 'g8', src: '/public/photos/snap.jpg', shape: 'tall', tilt: 1, caption: 'Our Snapchat profile together! 👻💛', message: "Even our Snapchat profile feels like a little symbol of us. Seeing our names and emojis together makes me smile every time. It's a small thing, but it reminds me that we are part of each other's little world. Here is to making many more memories together, kanna. 🥹❤️💕" },
+    { id: 'g1', src: '/photos/hold hand.jpg', shape: 'portrait', tilt: -2, caption: 'A little moment, but a memory I want to hold forever. ❤️', message: "I don't know where life will take us, but I hope your hand stays in mine through every step of it. 🥹❤️" },
+    { id: 'g2', src: '/photos/bike and you.jpg', shape: 'square', tilt: 2, caption: 'Your two favourite things in one picture! 🏍️❤️', message: 'I know how much you love your bike, but I hope you know that I want to be your favourite person to ride through every road and every adventure with. ❤️' },
+    { id: 'g3', src: '/photos/hand heart.jpg', shape: 'landscape', tilt: -1, caption: 'A little heart, made with a lot of love. ❤️', message: 'Two palms, two little hearts, but just one love. No matter where life takes us, a piece of my heart will always belong to you. 🥹💕' },
+    { id: 'g4', src: '/photos/together biside.jpg', shape: 'tall', tilt: 2, caption: 'My favourite place is right beside you. ❤️', message: "I don't need anything special when I'm with you. Just sitting beside you, holding your arm and enjoying those little moments is enough to make me happy. 🥹💕" },
+    { id: 'g5', src: '/photos/bike ride.jpg', shape: 'square', tilt: -2, caption: 'Our first ride, the beginning of many beautiful memories! 🏍️❤️', message: 'I still remember our very first bike ride together. That little selfie became one of my favourite memories. I wish we could go on a thousand more rides, making memories together. 🥹💕' },
+    { id: 'g6', src: '/photos/fav pic.jpg', shape: 'portrait', tilt: 1, caption: 'My favourite picture of my favourite person. ❤️', message: "I don't know what makes this picture so special, but I could look at it a hundred times and still smile. Maybe it's because the person in it means the world to me. 🥹❤️" },
+    { id: 'g7', src: '/photos/bus travel.jpg', shape: 'landscape', tilt: -2, caption: 'Our first night bus ride together! 🌙❤️', message: 'That night journey with you will always be a special memory for me. The little kisses, warm hugs, sweet moments and having you beside me made that ride even more beautiful. I still remember how special it felt to be close to you throughout the journey. I wish we could have many more night journeys filled with kisses, hugs and endless love,🥹😘🫂💕' },
+    { id: 'g8', src: '/photos/snap.jpg', shape: 'tall', tilt: 1, caption: 'Our Snapchat profile together! 👻💛', message: "Even our Snapchat profile feels like a little symbol of us. Seeing our names and emojis together makes me smile every time. It's a small thing, but it reminds me that we are part of each other's little world. Here is to making many more memories together, kanna. 🥹❤️💕" },
   ],
 };
 
