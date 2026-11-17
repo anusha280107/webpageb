@@ -1,0 +1,43 @@
+.hidden-heart {
+  position: absolute;
+  z-index: 5;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--rose);
+  opacity: 0.34;
+  cursor: pointer;
+  transition: opacity 0.3s ease, transform 0.3s ease, filter 0.3s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.hidden-heart:hover,
+.hidden-heart:focus-visible {
+  opacity: 1;
+  transform: scale(1.25) rotate(-8deg);
+  filter: drop-shadow(0 0 8px rgba(232, 165, 184, 0.9));
+}
+
+.hidden-heart.is-found {
+  pointer-events: none;
+  animation: heart-found 0.9s ease forwards;
+}
+
+@keyframes heart-found {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  40% {
+    opacity: 1;
+    transform: scale(2.1) translateY(-8px);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.6) translateY(-44px);
+  }
+}

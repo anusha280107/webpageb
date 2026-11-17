@@ -1,0 +1,100 @@
+.fx {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.fx__item {
+  position: absolute;
+  display: block;
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+.fx__heart {
+  bottom: -40px;
+  color: var(--rose);
+  animation: fx-rise var(--dur) linear var(--delay) infinite;
+}
+
+.fx__petal {
+  top: -30px;
+  width: var(--size);
+  height: calc(var(--size) * 1.3);
+  border-radius: 80% 0 80% 0;
+  background: linear-gradient(135deg, #fbdfe5, #eeb0c1);
+  animation: fx-fall var(--dur) linear var(--delay) infinite;
+}
+
+.fx__petal:nth-child(even) {
+  background: linear-gradient(135deg, #e3f2e6, #aecdb1);
+}
+
+.fx__sparkle {
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  background: radial-gradient(circle, #fff 0%, rgba(255, 240, 205, 0.9) 35%, transparent 70%);
+  animation: fx-twinkle var(--dur) ease-in-out var(--delay) infinite;
+}
+
+@keyframes fx-rise {
+  0% {
+    transform: translate3d(0, 0, 0) scale(0.8);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.5;
+  }
+  90% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translate3d(var(--drift), -112vh, 0) scale(1.1);
+    opacity: 0;
+  }
+}
+
+@keyframes fx-fall {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate3d(var(--drift), 112vh, 0) rotate(540deg);
+    opacity: 0;
+  }
+}
+
+@keyframes fx-twinkle {
+  0%,
+  100% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+}
+
+/* Fewer effects on small screens to keep things smooth */
+@media (max-width: 600px) {
+  .fx__item:nth-child(3n) {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fx {
+    display: none;
+  }
+}

@@ -1,0 +1,281 @@
+.gallery {
+  background: linear-gradient(180deg, transparent, rgba(220, 239, 226, 0.45) 30%, rgba(220, 239, 226, 0.45) 70%, transparent);
+}
+
+/* ---------- Favourite memory ---------- */
+.fav-wrap {
+  max-width: 900px;
+  margin: 0 auto clamp(48px, 7vw, 80px);
+}
+
+.fav {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 28px;
+  width: 100%;
+  padding: 18px;
+  border: 2px dashed var(--rose);
+  border-radius: 30px;
+  background: rgba(255, 250, 246, 0.85);
+  box-shadow: var(--shadow-soft), var(--shadow-lift);
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+.fav:hover {
+  transform: translateY(-5px) rotate(-0.5deg);
+}
+
+.fav__photo {
+  position: relative;
+  display: block;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border: 6px solid #fff;
+  border-radius: 20px;
+  background: var(--blush);
+  transform: rotate(-2deg);
+  box-shadow: 0 12px 28px rgba(75, 58, 64, 0.2);
+}
+
+.fav__photo .photo {
+  position: absolute;
+  inset: 0;
+}
+
+.fav__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding-right: 10px;
+}
+
+.fav__badge {
+  padding: 5px 16px;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #fff;
+  background: linear-gradient(135deg, var(--rose), var(--dusty));
+}
+
+.fav__caption {
+  font-size: clamp(1.7rem, 3.6vw, 2.4rem);
+  line-height: 1.15;
+  color: var(--dusty-deep);
+}
+
+.fav__teaser {
+  color: var(--ink-soft);
+}
+
+.fav__cta {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--sage-deep);
+}
+
+/* ---------- Scrapbook polaroids ---------- */
+.scrapbook {
+  column-count: 4;
+  column-gap: 24px;
+}
+
+.scrapbook > .reveal {
+  break-inside: avoid;
+}
+
+.polaroid {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 0 0 28px;
+  padding: 10px 10px 12px;
+  border: 0;
+  border-radius: 6px;
+  background: var(--warm-white);
+  box-shadow: 0 10px 26px rgba(75, 58, 64, 0.16);
+  text-align: center;
+  cursor: pointer;
+  transform: rotate(var(--tilt, 0deg));
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.polaroid:hover,
+.polaroid:focus-visible {
+  z-index: 2;
+  transform: rotate(0deg) translateY(-6px) scale(1.03);
+  box-shadow: 0 20px 38px rgba(75, 58, 64, 0.24);
+}
+
+.polaroid::before {
+  content: '';
+  position: absolute;
+  top: -11px;
+  left: 50%;
+  z-index: 1;
+  width: 70px;
+  height: 22px;
+  margin-left: -35px;
+  background: rgba(169, 196, 161, 0.6);
+  transform: rotate(-3deg);
+}
+
+.scrapbook > .reveal:nth-child(even) .polaroid::before {
+  background: rgba(232, 165, 184, 0.55);
+  transform: rotate(4deg);
+}
+
+.polaroid__img {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 2px;
+  background: var(--blush);
+}
+
+.polaroid__img .photo {
+  position: absolute;
+  inset: 0;
+}
+
+.polaroid--portrait .polaroid__img {
+  aspect-ratio: 4 / 5;
+}
+.polaroid--square .polaroid__img {
+  aspect-ratio: 1 / 1;
+}
+.polaroid--landscape .polaroid__img {
+  aspect-ratio: 5 / 4;
+}
+.polaroid--tall .polaroid__img {
+  aspect-ratio: 2 / 3;
+}
+
+.polaroid__cap {
+  display: block;
+  margin-top: 10px;
+  font-family: var(--font-script);
+  font-size: 1.15rem;
+  line-height: 1.25;
+  color: var(--dusty-deep);
+}
+
+/* ---------- Lightbox ---------- */
+.lightbox__photo {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  max-height: 58vh;
+  background: var(--blush);
+}
+
+.lightbox__photo .photo {
+  position: absolute;
+  inset: 0;
+}
+
+.lightbox__photo .photo--img {
+  object-fit: contain;
+  background: #3f3338;
+}
+
+.lightbox__arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  padding: 0 0 4px;
+  border: 0;
+  border-radius: 50%;
+  font-size: 1.8rem;
+  line-height: 1;
+  color: var(--dusty-deep);
+  background: rgba(255, 250, 246, 0.9);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.lightbox__arrow--prev {
+  left: 12px;
+}
+.lightbox__arrow--next {
+  right: 12px;
+}
+
+.lightbox__info {
+  padding: 24px 28px 30px;
+  text-align: center;
+  background:
+    repeating-linear-gradient(180deg, transparent 0 33px, rgba(232, 165, 184, 0.2) 33px 34px),
+    var(--cream);
+  animation: lightbox-in 0.6s ease 0.1s both;
+}
+
+.lightbox__count {
+  margin: 0;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  color: var(--sage-deep);
+}
+
+.lightbox__caption {
+  margin: 4px 0 10px;
+  font-size: 2rem;
+  color: var(--dusty-deep);
+}
+
+.lightbox__note {
+  max-width: 560px;
+  margin: 0 auto;
+  font-family: var(--font-script);
+  font-size: 1.35rem;
+  line-height: 1.5;
+  color: var(--ink);
+}
+
+@keyframes lightbox-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  .scrapbook {
+    column-count: 3;
+  }
+}
+
+@media (max-width: 700px) {
+  .scrapbook {
+    column-count: 2;
+    column-gap: 14px;
+  }
+  .fav {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+  .fav__photo {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+  .polaroid__cap {
+    font-size: 1rem;
+  }
+}
