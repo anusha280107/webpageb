@@ -7,7 +7,7 @@ import MusicPlayer from './components/MusicPlayer';
 import HeartCounter from './components/HeartCounter';
 import Hero from './components/Hero';
 import Celebration from './components/Celebration';
-import Timeline from './components/Timeline';
+import Timeline from './components/TimeLine';
 import Gallery from './components/Gallery';
 import Letters from './components/Letters';
 import Reasons from './components/Reasons';
