@@ -14,7 +14,7 @@ export const site = {
   // EDIT: HIS BIRTHDAY (PLACEHOLDER DATE - CHANGE IT!)
   // Format: 'YYYY-MM-DDTHH:MM:SS' using the time on HIS device.
   // Example for 25 March 2027 at midnight: '2027-03-25T00:00:00'
-  birthdayDate: '2026-11-18',
+  birthdayDate: "2026-11-18T00:00:00",
 
   // Sections shown in the navigation bar (ids must match section ids)
   nav: [
