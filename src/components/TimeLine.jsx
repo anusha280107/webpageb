@@ -2,7 +2,7 @@ import Reveal from './Reveal';
 import Photo from './Photo';
 import Icon from './Icon';
 import { timeline } from '../data/siteData';
-import './Timeline.css';
+import './TimeLine.css';
 
 export default function Timeline() {
   return (
